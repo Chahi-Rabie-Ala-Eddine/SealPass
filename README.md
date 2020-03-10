@@ -13,4 +13,4 @@ Its features are as follows :
 
 ## License & copyright
 
-© **Chahi Rabie Ala Eddine**, **Jaquet Julien**, **Ben Mallem Amir**, **Fabius**, **Abdoulay** ***Versailles Saint Quentin en Yvelines college***.
+© **Chahi Rabie Ala Eddine**, **Jacquet Julien**, **Ben Mallem Amir**, **Kossi Eloi Fabius Defly**, **Balde Abdoulaye** ***Versailles Saint Quentin en Yvelines college***.
