@@ -3,6 +3,8 @@
 import React from 'react';//Importation de React
 import Login from './components/login_page_component';//Importation du composant 'Login'
 import './App.css';//Importation de la feuille de style
+import Userpage from './components/user_page_component';
+
 
 //La fonction App est le point d'entré de l'application, il return le bloc principal de l'application.
 function App() {
@@ -10,7 +12,7 @@ function App() {
     //Le bloc principal qui charge les différentes composants de l'application
     <div className="App">
       {/* le composant 'Login' intègre la page de connexion et d'inscription de l'application */}
-      <Login />
+      <Userpage />
     </div>
   );
 }
