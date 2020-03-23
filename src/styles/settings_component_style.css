@@ -1,0 +1,156 @@
+.settings_block {
+  min-width: max-content;
+  display: flex;
+  width: 40%;
+  border-radius: 12px;
+  flex-flow: column;
+  padding: 0 5rem;
+  background-color: white;
+  margin: 5rem auto 5rem auto;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.settings_block h1 {
+  margin-left: 1rem;
+}
+
+.email_box {
+  min-width: max-content;
+  display: flex;
+  flex-flow: column;
+  flex: 1;
+  align-items: center;
+  justify-content: space-around;
+  background-color: white;
+}
+
+.email_box h4{
+  margin: 0 0 1rem 0;
+}
+
+.email {
+  display: flex;
+}
+
+.email_input {
+  display: flex;
+  width: 200px;
+  height: fit-content;
+  padding: 1rem;
+  border-radius: 30px;
+  border: 1px solid grey;
+}
+
+.change_email_button_box {
+  display: flex;
+}
+
+.change_email_button {
+  display: flex;
+  width: auto;
+  padding: 1rem;
+  height: auto;
+  margin: 1rem;
+  background-color: red;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  border-radius: 50px;
+}
+
+.pwd_box {
+  min-width: max-content;
+  display: flex;
+  flex: 1;
+  flex-flow: column;
+  align-items: center;
+  align-content: space-around;
+  background-color: white;
+  margin: 1rem;
+}
+
+.pwd_box h4{
+  margin: 0 0 1rem 0;
+}
+
+.pwd_title {
+  display: flex;
+  grid-area: title;
+  justify-content: space-around;
+}
+
+.change_pwd_button_block {
+  display: flex;
+  flex: 1;
+  min-width: max-content;
+  padding: 1rem;
+  grid-area: change_pwd_button_block;
+  justify-items: center;
+  justify-content: space-around;
+}
+
+.change_pwd_button {
+  display: flex;
+  min-width: max-content;
+  padding: 1rem;
+  width: auto;
+  height: auto;
+  background-color: red;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  border-radius: 50px;
+}
+
+.pwd_input_1,
+.pwd_input_2,
+.pwd_input_3 {
+  display: flex;
+  min-width: max-content;
+  width: 200px;
+  height: fit-content;
+  padding: 1rem;
+  border-radius: 30px;
+  border: 1px solid grey;
+  margin: 0.5rem 0 0.5rem 0;
+}
+
+.language_box {
+  min-width: max-content;
+  max-width: available;
+  display: flex;
+  flex-flow: column;
+  flex: 1 0 0;
+  align-items: center;
+  align-content: space-around;
+  justify-content: space-around;
+  justify-items: center;
+  border-radius: 12px;
+  background-color: white;
+}
+
+.language_box h4{
+  margin: 1rem 0 0 0;
+}
+
+.language_select {
+  display: flex;
+  width: auto;
+  padding: 1rem;
+  height: auto;
+  margin: 1rem;
+  background-color: red;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  border-radius: 50px;
+}
+
+.hr_line{
+  width: inherit;
+  min-width: 200px;
+  height: 0;
+  border: 0;
+  border-top: 1px solid rgba(0,0,0,0.1);
+  border-bottom:1px solid rgba(255,255,255,0.3);
+}

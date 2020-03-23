@@ -1,0 +1,91 @@
+.cloud_block {
+  min-width: max-content;
+  display: flex;
+  width: 20%;
+  border-radius: 5px;
+  flex-flow: column;
+  padding: 10px;
+  background-color: rgb(0,0,0,0.4);
+  margin: 5rem auto 5rem auto;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+
+.btn_upload{
+  width: 100%;
+	background-color:red ;
+	border:2px solid black;
+	color: white;
+	padding: 5px;
+	font-size: 25px;
+	cursor: pointer;
+	margin:12px 0;
+	border-radius: 5px;
+}
+
+.btn_upload:hover{
+  background-color: green;
+	text-transform: uppercase;
+}
+
+.form_upload{
+  padding:0 5rem;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.input_upload{
+  width: 100%;
+  border:2px groove black;
+  border-radius:3px;
+}
+
+.form_delete_file{
+  padding:-0 5rem;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.btn_delete_sub{
+  width: 150px;
+	padding: 5px;
+	font-size: 16px;
+	font-family: sans-serif;
+	font-style: italic;
+	font-weight: 600;
+	border: none;
+	border-radius: 3px;
+	outline: 0;
+	background-color: red;
+	cursor: pointer;
+	margin-right: 5px;
+}
+
+.btn_delete_cancel{
+  width: 150px;
+  padding: 5px;
+  font-size: 16px;
+  font-family: sans-serif;
+  font-style: italic;
+  font-weight: 600;
+  border: none;
+  border-radius: 3px;
+  outline: 0;
+  background-color: red;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.btn_delete_sub:hover,.btn_delete_cancel:hover{
+  background-color: green;
+	text-transform: uppercase;
+}
+
+.select_file_to_delete{
+  padding:5px;
+  width: 100%;
+	border:3px groove black;
+	border-radius: 3px;
+	outline: 0;
+  margin:12px 0;
+}
