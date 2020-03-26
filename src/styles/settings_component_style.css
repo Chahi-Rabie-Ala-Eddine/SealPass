@@ -79,6 +79,17 @@
   justify-content: space-around;
 }
 
+.pwd{
+  display: flex;
+  flex-flow: column;
+}
+
+.pwdError{
+  display: flex;
+  justify-items: center;
+  justify-content: space-around;
+}
+
 .change_pwd_button_block {
   display: flex;
   flex: 1;
@@ -142,6 +153,15 @@
   background-color: red;
   color: white;
   border: none;
+  font-size: 1rem;
+  border-radius: 50px;
+}
+
+.language_select option{
+  display: flex;
+  max-width: min-content;
+  background-color: red;
+  color: white;
   font-size: 1rem;
   border-radius: 50px;
 }
