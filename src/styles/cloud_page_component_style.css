@@ -1,0 +1,157 @@
+.cloudFolderComponentContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    margin-bottom: 3rem;
+}
+
+.cloudFileComponentContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.iconShareLine{
+    display: flex;
+    flex-flow: row;
+    justify-items: center;
+    justify-content: space-between;
+}
+
+.plusButton{
+    margin: 1rem;
+    padding: 0.8rem;
+    border: 1px solid lightgrey;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    background-color: white;
+    transition-duration: 0.15s;
+}
+
+.plusButton:hover{
+    margin: 1rem;
+    padding: 0.8rem;
+    border: 1px solid lightgrey;
+    border-radius: 15px;
+    box-shadow: none;
+    background-color: white;
+    cursor: pointer;
+}
+.plusButton:active{
+    margin: 1rem;
+    padding: 0.8rem;
+    border: 1px solid lightgrey;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    background-color: white;
+    transition-duration: 0.1s;
+}
+
+.plusButton h1{
+    margin: 0;
+    font-size: xx-large;
+}
+
+.shareButton{
+    width: 40px;
+    height: 30px;
+    margin-right: 1rem;
+    border: none;
+    color: white;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 40px;
+    transition-duration: 0.15s;
+}
+
+.shareButton:hover{
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.shareButton:active{
+    box-shadow: none;
+    background-color: rgba(0,0,0,0.19);
+}
+
+.FolderBox, .FileBox{
+    margin: 1rem;
+    padding: 0.8rem;
+    border: 1px solid lightgrey;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    background-color: white;
+}
+
+.FolderBox img,.FileBox img{
+    width: 30px;
+}
+
+.nameDate h3,.nameDateSize h3{
+    margin: 2rem 0.5rem 0 0.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 250px;
+}
+
+.nameDateSize h6{
+    margin: 2rem 0.5rem 0 0.5rem;
+}
+
+.shareIcon{
+    transform: rotate(45deg);
+}
+
+.nameDate h5{
+    margin: 0 0.5rem 1rem 0.5rem;
+    font-weight: lighter;
+    font-style: italic;
+    color: rgba(0,0,0,0.5);
+}
+
+.nameDateSize h5{
+    margin: 0 0.5rem 0 0.5rem;
+    font-weight: lighter;
+    font-style: italic;
+    color: rgba(0,0,0,0.5);
+}
+
+.nameDateSize h6{
+    margin: 0 0.5rem 0 0.5rem;
+}
+
+.folderIcon, .fileIcon{
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+
+.hr_line{
+    margin-left: 1rem;
+    margin-right: 1rem;
+    width: inherit;
+    min-width: 200px;
+    height: 0;
+    border: 0;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    border-bottom:1px solid rgba(255,255,255,0.3);
+}
+
+
+h1, h2{
+    margin-left: 1rem;
+}
+
+h2{
+    font-weight: normal;
+}
+
+
+body{
+    background-color: rgba(0,0,0,0.02);
+}
+
+main {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
