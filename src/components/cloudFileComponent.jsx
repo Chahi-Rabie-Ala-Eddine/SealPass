@@ -4,6 +4,7 @@ import share_link from "../assets/images/link.png";
 import "../styles/cloud_page_component_style.css";
 
 export default class cloudFileComponent extends Component {
+  //TODO share button action
   render() {
     return (
       <div className={"FileBox"}>
@@ -14,9 +15,9 @@ export default class cloudFileComponent extends Component {
           </button>
         </span>
         <div className={"nameDateSize"}>
-          <h3>Nom du fichier</h3>
-          <h5>Date de creation</h5>
-          <h6>12Ko</h6>
+          <h3>{this.props.fileInfo.name}</h3>
+          <h5>{this.props.fileInfo.date}</h5>
+          <h6>{this.props.fileInfo.size}</h6>
         </div>
       </div>
     );

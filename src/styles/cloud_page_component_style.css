@@ -16,6 +16,38 @@
     justify-content: space-between;
 }
 
+.sign_up_block {
+    height: 500px;
+    width: 400px;
+    border-radius: 12px;
+    margin-left: 300px;
+    background-color: white;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.Overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.overlayButton{
+    justify-content: right;
+}
+
+.Modal {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    right: 40px;
+    bottom: 40px;
+    background-color: white;
+    border-radius: 50px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
 .plusButton{
     margin: 1rem;
     padding: 0.8rem;

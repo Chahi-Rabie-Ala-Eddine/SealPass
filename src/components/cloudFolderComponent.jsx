@@ -4,6 +4,12 @@ import share_link from "../assets/images/link.png";
 import "../styles/cloud_page_component_style.css";
 
 export default class cloudFolderComponent extends Component {
+  //TODO share button action
+  constructor(props) {
+    super(props);
+    this.state = { copySharelinkSuccess: "" };
+  }
+
   render() {
     return (
       <div className={"FolderBox"}>
@@ -14,8 +20,8 @@ export default class cloudFolderComponent extends Component {
           </button>
         </span>
         <div className={"nameDate"}>
-          <h3>Nom du Dossier</h3>
-          <h5>Date de modification</h5>
+          <h3>{this.props.folderInfo.name}</h3>
+          <h5>{this.props.folderInfo.date}</h5>
         </div>
       </div>
     );
