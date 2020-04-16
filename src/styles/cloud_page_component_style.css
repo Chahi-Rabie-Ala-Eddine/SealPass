@@ -1,189 +1,256 @@
-.cloudFolderComponentContainer{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    margin-bottom: 3rem;
+.cloudFolderComponentContainer,
+.cloudFileComponentContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin-bottom: 3rem;
 }
 
-.cloudFileComponentContainer{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+.iconShareLine {
+  display: flex;
+  flex-flow: row;
+  justify-items: center;
+  justify-content: space-between;
 }
 
-.iconShareLine{
+.newFolderNameText{
     display: flex;
-    flex-flow: row;
-    justify-items: center;
-    justify-content: space-between;
-}
-
-.sign_up_block {
-    height: 500px;
-    width: 400px;
-    border-radius: 12px;
-    margin-left: 300px;
-    background-color: white;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    width: 200px;
+    height: fit-content;
+    padding: 1rem;
+    border-radius: 30px;
+    border: 1px solid grey;
 }
 
 .Overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-}
-
-.overlayButton{
-    justify-content: right;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .Modal {
-    position: absolute;
-    top: 40px;
-    left: 40px;
-    right: 40px;
-    bottom: 40px;
-    background-color: white;
-    border-radius: 50px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  right: 40px;
+  bottom: 40px;
+  border-radius: 50px;
+  background: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.plusButton{
-    margin: 1rem;
-    padding: 0.8rem;
-    border: 1px solid lightgrey;
-    border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-    background-color: white;
-    transition-duration: 0.15s;
+.plusButton {
+  width: 100%;
+  height: 100%;
+  border: 1px solid lightgrey;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  background-color: white;
+  transition-duration: 0.15s;
 }
 
-.plusButton:hover{
-    margin: 1rem;
-    padding: 0.8rem;
-    border: 1px solid lightgrey;
-    border-radius: 15px;
-    box-shadow: none;
-    background-color: white;
-    cursor: pointer;
-}
-.plusButton:active{
-    margin: 1rem;
-    padding: 0.8rem;
-    border: 1px solid lightgrey;
-    border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-    background-color: white;
-    transition-duration: 0.1s;
+.plusButton:hover {
+  border: 1px solid lightgrey;
+  border-radius: 15px;
+  box-shadow: none;
+  background-color: white;
+  cursor: pointer;
 }
 
-.plusButton h1{
-    margin: 0;
-    font-size: xx-large;
+.plusButton:active {
+  border: 1px solid lightgrey;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  background-color: white;
+  transition-duration: 0.1s;
 }
 
-.shareButton{
-    width: 40px;
-    height: 30px;
-    margin-right: 1rem;
-    border: none;
-    color: white;
-    cursor: pointer;
-    background-color: white;
-    border-radius: 40px;
-    transition-duration: 0.15s;
+.plusButton h1 {
+  margin: 0;
+  font-size: xx-large;
 }
 
-.shareButton:hover{
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+.shareButton {
+  width: 40px;
+  height: 30px;
+  margin-right: 1rem;
+  border: none;
+  color: white;
+  cursor: pointer;
+  background-color: white;
+  border-radius: 40px;
+  transition-duration: 0.15s;
 }
 
-.shareButton:active{
-    box-shadow: none;
-    background-color: rgba(0,0,0,0.19);
+.shareButton:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
-.FolderBox, .FileBox{
-    margin: 1rem;
-    padding: 0.8rem;
-    border: 1px solid lightgrey;
-    border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-    background-color: white;
+.shareButton:active {
+  box-shadow: none;
+  background-color: rgba(0, 0, 0, 0.19);
 }
 
-.FolderBox img,.FileBox img{
-    width: 30px;
+.FolderBox,
+.FileBox {
+  margin: 1rem;
+  padding: 0.8rem;
+  border: 1px solid lightgrey;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  background-color: white;
 }
 
-.nameDate h3,.nameDateSize h3{
-    margin: 2rem 0.5rem 0 0.5rem;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 250px;
+.aroundPlusButton {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  margin: 1rem;
+  background: none;
 }
 
-.nameDateSize h6{
-    margin: 2rem 0.5rem 0 0.5rem;
+.FolderBox img,
+.FileBox img {
+  width: 30px;
 }
 
-.shareIcon{
-    transform: rotate(45deg);
+.nameDate h3,
+.nameDateSize h3 {
+  margin: 2rem 0.5rem 0 0.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 250px;
 }
 
-.nameDate h5{
-    margin: 0 0.5rem 1rem 0.5rem;
-    font-weight: lighter;
-    font-style: italic;
-    color: rgba(0,0,0,0.5);
+.uploadModal {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  width: 40%;
+  height: fit-content;
+  border-radius: 12px;
+  flex-flow: column;
+  align-content: space-around;
+  padding: 0 5rem;
+  background-color: white;
+  margin: 5rem auto 5rem auto;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
-.nameDateSize h5{
-    margin: 0 0.5rem 0 0.5rem;
-    font-weight: lighter;
-    font-style: italic;
-    color: rgba(0,0,0,0.5);
+.fileInput {
+  min-width: max-content;
+  width: 70%;
+  height: 300px;
+  padding: 1rem;
+  border-radius: 30px;
+  border: 1px solid grey;
+  margin: 0.5rem 0 0.5rem 0;
 }
 
-.nameDateSize h6{
-    margin: 0 0.5rem 0 0.5rem;
+.fileInput::-webkit-file-upload-button {
+  align-items: center;
 }
 
-.folderIcon, .fileIcon{
-    margin-right: 1rem;
-    margin-left: 1rem;
+.uploadFileButton,
+.overlayButton,
+.createFolderButton,
+.fileInput::-webkit-file-upload-button {
+  margin: 1rem;
+  display: flex;
+  min-width: max-content;
+  padding: 1rem;
+  width: auto;
+  height: auto;
+  background-color: red;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  border-radius: 50px;
 }
 
-.hr_line{
-    margin-left: 1rem;
-    margin-right: 1rem;
-    width: inherit;
-    min-width: 200px;
-    height: 0;
-    border: 0;
-    border-top: 1px solid rgba(0,0,0,0.1);
-    border-bottom:1px solid rgba(255,255,255,0.3);
+.uploadFileButton:hover,
+.overlayButton:hover,
+.createFolderButton:hover,
+.fileInput::-webkit-file-upload-button:hover {
+  background-color: rgb(200, 0, 0);
 }
 
-
-h1, h2{
-    margin-left: 1rem;
+.createFolderButton:active,
+.uploadFileButton:active,
+.overlayButton:active,
+.fileInput::-webkit-file-upload-button:active {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
-h2{
-    font-weight: normal;
+.buttonRow {
+  display: flex;
+  flex-direction: row;
 }
 
+.nameDateSize h6 {
+  margin: 2rem 0.5rem 0 0.5rem;
+}
 
-body{
-    background-color: rgba(0,0,0,0.02);
+.shareIcon {
+  transform: rotate(45deg);
+}
+
+.nameDate h5 {
+  margin: 0 0.5rem 1rem 0.5rem;
+  font-weight: lighter;
+  font-style: italic;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.nameDateSize h5 {
+  margin: 0 0.5rem 0 0.5rem;
+  font-weight: lighter;
+  font-style: italic;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.nameDateSize h6 {
+  margin: 0 0.5rem 0 0.5rem;
+}
+
+.folderIcon,
+.fileIcon {
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+
+.hr_line {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  width: inherit;
+  min-width: 200px;
+  height: 0;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+h1,
+h2 {
+  margin-left: 1rem;
+}
+
+h2 {
+  font-weight: normal;
+}
+
+body {
+  background-color: rgba(0, 0, 0, 0.02);
 }
 
 main {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
 }
