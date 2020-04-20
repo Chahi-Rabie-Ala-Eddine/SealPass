@@ -4,22 +4,58 @@ import share_link from "../assets/images/link.png";
 import "../styles/cloud_page_component_style.css";
 
 export default class cloudFileComponent extends Component {
-  //TODO share button action
+  constructor(props) {
+    super(props);
+    this.state = {
+      showModal: false,
+      isVisible: false,
+    };
+    this.handleHiddenSwitch = this.handleHiddenSwitch.bind(this);
+    this.handleFileDelete = this.handleFileDelete.bind(this);
+    this.handleFileDownload = this.handleFileDownload.bind(this);
+  }
+
+  handleFileDownload() {
+    //TODO AJAX
+    console.log("downloading file");
+  }
+
+  handleFileDelete() {
+    //TODO AJAX
+    console.log("deleted file");
+  }
+
+  handleHiddenSwitch() {
+    if (this.state.isVisible) {
+      this.setState({ isVisible: false });
+    } else {
+      this.setState({ isVisible: true });
+    }
+  }
+
   render() {
     return (
-      <div className={"FileBox"}>
+      <section className={"FileBox"}>
         <span className={"iconShareLine"}>
           <img src={file_icon} alt={file_icon} className={"fileIcon"} />
-          <button className={"shareButton"}>
+          <button className={"shareButton"} onClick={this.handleHiddenSwitch}>
             <img src={share_link} alt={share_link} className={"shareIcon"} />
           </button>
+          <div
+            className={
+              this.state.isVisible ? "dropDownMenu" : "dropDownMenu_hidden"
+            }
+          >
+            <button className={"fileDownloadButton"} onClick={this.handleFileDownload}>Download</button>
+            <button className={"fileDeleteButton"} onClick={this.handleFileDelete}>Delete</button>
+          </div>
         </span>
         <div className={"nameDateSize"}>
           <h3>{this.props.fileInfo.name}</h3>
           <h5>{this.props.fileInfo.date}</h5>
           <h6>{this.props.fileInfo.size}</h6>
         </div>
-      </div>
+      </section>
     );
   }
 }

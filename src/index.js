@@ -4,10 +4,12 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import CloudComponent from "./components/cloud_component";
+import Modal from "react-modal";
 
 //TODO remove //dev-only//
 
 
+Modal.setAppElement("#root");
 
 ReactDOM.render(<CloudComponent/>, document.getElementById('root'));
 

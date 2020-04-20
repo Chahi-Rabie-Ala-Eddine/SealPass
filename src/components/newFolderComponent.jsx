@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "../styles/cloud_page_component_style.css";
-import settings_component from "./settings_component";
 import Modal from "react-modal";
 
 export default class newFolderComponent extends Component {
@@ -21,9 +20,11 @@ export default class newFolderComponent extends Component {
   }
 
   handleUploadRequest() {
-    //TODO AJAX
-    console.log("uploading new folder");
-    this.handleCloseModal();
+    if(this.state.folderName != null) {
+      console.log("creating new folder");
+      //TODO AJAX
+      this.handleCloseModal();
+    }
   }
 
   handleCloseModal() {

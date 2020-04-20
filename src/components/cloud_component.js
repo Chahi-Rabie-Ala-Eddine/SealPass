@@ -19,26 +19,185 @@ export default class cloud_component extends Component {
           name: "Folder1",
           date: "10-04-2020",
           sharelink: "dfqjbgdfbkbgdfk",
+          files: [
+            {
+              name: "File1",
+              size: "20ko",
+              date: "10-04-2020",
+              sharelink: "bloblbopbl",
+            },
+            {
+              name: "File2",
+              size: "35ko",
+              date: "10-04-2020",
+              sharelink: "blopblpoblpo",
+            },
+            {
+              name: "File3",
+              size: "20ko",
+              date: "10-04-2020",
+              sharelink: "bloblbopbl",
+            },
+            {
+              name: "File5",
+              size: "20ko",
+              date: "10-04-2020",
+              sharelink: "bloblbopbl",
+            },
+            {
+              name: "File4",
+              size: "20ko",
+              date: "10-04-2020",
+              sharelink: "bloblbopbl",
+            },
+          ],
         },
         {
           name: "Folder2",
           date: "10-04-2020",
           sharelink: "dfqjbgdfbkbgdfk",
-        },
+          files: [
+            {
+              name: "File1",
+              size: "20ko",
+              date: "10-04-2020",
+              sharelink: "bloblbopbl",
+            },
+            {
+              name: "File2",
+              size: "35ko",
+              date: "10-04-2020",
+              sharelink: "blopblpoblpo",
+            },
+            {
+              name: "File3",
+              size: "20ko",
+              date: "10-04-2020",
+              sharelink: "bloblbopbl",
+            },
+            {
+              name: "File5",
+              size: "20ko",
+              date: "10-04-2020",
+              sharelink: "bloblbopbl",
+            },
+            {
+              name: "File4",
+              size: "20ko",
+              date: "10-04-2020",
+              sharelink: "bloblbopbl",
+            },
+          ],},
         {
           name: "Folder3",
           date: "10-04-2020",
           sharelink: "dfqjbgdfbkbgdfk",
+          files: [
+            {
+              name: "File1",
+              size: "20ko",
+              date: "10-04-2020",
+              sharelink: "bloblbopbl",
+            },
+            {
+              name: "File2",
+              size: "35ko",
+              date: "10-04-2020",
+              sharelink: "blopblpoblpo",
+            },
+            {
+              name: "File3",
+              size: "20ko",
+              date: "10-04-2020",
+              sharelink: "bloblbopbl",
+            },
+            {
+              name: "File5",
+              size: "20ko",
+              date: "10-04-2020",
+              sharelink: "bloblbopbl",
+            },
+            {
+              name: "File4",
+              size: "20ko",
+              date: "10-04-2020",
+              sharelink: "bloblbopbl",
+            },
+          ],
         },
         {
           name: "Folder4",
           date: "10-04-2020",
           sharelink: "dfqjbgdfbkbgdfk",
+          files: [
+            {
+              name: "File1",
+              size: "20ko",
+              date: "10-04-2020",
+              sharelink: "bloblbopbl",
+            },
+            {
+              name: "File2",
+              size: "35ko",
+              date: "10-04-2020",
+              sharelink: "blopblpoblpo",
+            },
+            {
+              name: "File3",
+              size: "20ko",
+              date: "10-04-2020",
+              sharelink: "bloblbopbl",
+            },
+            {
+              name: "File5",
+              size: "20ko",
+              date: "10-04-2020",
+              sharelink: "bloblbopbl",
+            },
+            {
+              name: "File4",
+              size: "20ko",
+              date: "10-04-2020",
+              sharelink: "bloblbopbl",
+            },
+          ],
         },
         {
           name: "Folder5",
           date: "10-04-2020",
           sharelink: "dfqjbgdfbkbgdfk",
+          files: [
+            {
+              name: "File1",
+              size: "20ko",
+              date: "10-04-2020",
+              sharelink: "bloblbopbl",
+            },
+            {
+              name: "File2",
+              size: "35ko",
+              date: "10-04-2020",
+              sharelink: "blopblpoblpo",
+            },
+            {
+              name: "File3",
+              size: "20ko",
+              date: "10-04-2020",
+              sharelink: "bloblbopbl",
+            },
+            {
+              name: "File5",
+              size: "20ko",
+              date: "10-04-2020",
+              sharelink: "bloblbopbl",
+            },
+            {
+              name: "File4",
+              size: "20ko",
+              date: "10-04-2020",
+              sharelink: "bloblbopbl",
+            },
+          ],
         },
       ],
       files: [
@@ -84,8 +243,8 @@ export default class cloud_component extends Component {
         <div>
           <h2>Folders</h2>
           <div className="cloudFolderComponentContainer">
-            {this.state.folders.map((folder) => (
-              <CloudFolderComponent folderInfo={folder} />
+            {this.state.folders.map((folder, i) => (
+              <CloudFolderComponent folderInfo={folder} key={i} />
             ))}
             <NewFolderComponent />
           </div>
@@ -93,8 +252,8 @@ export default class cloud_component extends Component {
         <div>
           <h2>Files</h2>
           <div className="cloudFileComponentContainer">
-            {this.state.files.map((file) => (
-              <CloudFileComponent fileInfo={file} />
+            {this.state.files.map((file, i) => (
+              <CloudFileComponent fileInfo={file} key={i} />
             ))}
             <FileUploadComponent />
           </div>
