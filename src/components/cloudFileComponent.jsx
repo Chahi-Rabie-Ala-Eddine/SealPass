@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import file_icon from "../assets/images/file_icon.png";
-import share_link from "../assets/images/link.png";
+import three_dots_fix from "../assets/images/3_black_dots_icon.png";
+import downloadIcon from "../assets/images/cloud-download-2.png";
 import "../styles/cloud_page_component_style.css";
 
 export default class cloudFileComponent extends Component {
@@ -39,15 +40,33 @@ export default class cloudFileComponent extends Component {
         <span className={"iconShareLine"}>
           <img src={file_icon} alt={file_icon} className={"fileIcon"} />
           <button className={"shareButton"} onClick={this.handleHiddenSwitch}>
-            <img src={share_link} alt={share_link} className={"shareIcon"} />
+            <img
+              src={three_dots_fix}
+              alt={three_dots_fix}
+              className={"actionsIcon"}
+            />
           </button>
           <div
             className={
               this.state.isVisible ? "dropDownMenu" : "dropDownMenu_hidden"
             }
           >
-            <button className={"fileDownloadButton"} onClick={this.handleFileDownload}>Download</button>
-            <button className={"fileDeleteButton"} onClick={this.handleFileDelete}>Delete</button>
+            <button
+              className={"fileDownloadButton"}
+              onClick={this.handleFileDownload}
+            >
+              <img
+                src={downloadIcon}
+                alt={downloadIcon}
+                className={"downloadIcon"}
+              />
+            </button>
+            <button
+              className={"fileDeleteButton"}
+              onClick={this.handleFileDelete}
+            >
+              Delete
+            </button>
           </div>
         </span>
         <div className={"nameDateSize"}>

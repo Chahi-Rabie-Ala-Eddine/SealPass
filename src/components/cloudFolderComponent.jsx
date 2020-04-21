@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import folder_red from "../assets/images/folder_red.png";
-import share_link from "../assets/images/link.png";
+import three_dots_fix from "../assets/images/3_black_dots_icon.png";
 import CloudFileComponent from "./cloudFileComponent";
 import "../styles/cloud_page_component_style.css";
 import Modal from "react-modal";
@@ -43,40 +43,51 @@ export default class cloudFolderComponent extends Component {
       <section className={"FolderBox"}>
         <span className={"iconShareLine"}>
           <img src={folder_red} alt={folder_red} className={"folderIcon"} />
-          <button className={"shareButton"}>
-            <img
-              src={share_link}
-              alt={share_link}
-              className={"shareIcon"}
-              onClick={this.handleHiddenSwitch}
-            />
-          </button>
-          <div
-            className={
-              this.state.isVisible ? "dropDownMenu" : "dropDownMenu_hidden"
-            }
-          >
-            <button className={"openFolderButton"} onClick={this.handleModal}>
-              Open
+          <div className={"actionsWrapper"}>
+            <button className={"shareButton"} onClick={this.handleHiddenSwitch}>
+              <img
+                src={three_dots_fix}
+                alt={three_dots_fix}
+                className={"actionsIcon"}
+              />
             </button>
-            <Modal
-              isOpen={this.state.showModal}
-              contentLabel={"onRequestClose"}
-              onRequestClose={this.handleModal}
-              className={"folderModal"}
-              overlayClassName={"Overlay"}
+            <div
+              className={
+                this.state.isVisible ? "dropDownMenu" : "dropDownMenu_hidden"
+              }
             >
-              <section className={"folderContentModal"}>
-                <h2>{this.props.folderInfo.name}</h2>
-                  <div className={"inFolderFilesGrid"}>{this.props.folderInfo.files.map((file, i) => (
-                    <CloudFileComponent fileInfo={file} key={i}/>
-                  ))}</div>
-                <button className={"overlayButton"} onClick={this.handleModal}>
-                  Close
-                </button>
-              </section>
-            </Modal>
-            <button onClick={this.handleFolderDelete}>Delete</button>
+              <button className={"openFolderButton"} onClick={this.handleModal}>
+                Open
+              </button>
+              <Modal
+                isOpen={this.state.showModal}
+                contentLabel={"onRequestClose"}
+                onRequestClose={this.handleModal}
+                className={"folderModal"}
+                overlayClassName={"Overlay"}
+              >
+                <section className={"folderContentModal"}>
+                  <h2>{this.props.folderInfo.name}</h2>
+                  <div className={"inFolderFilesGrid"}>
+                    {this.props.folderInfo.files.map((file, i) => (
+                      <CloudFileComponent fileInfo={file} key={i} />
+                    ))}
+                  </div>
+                  <button
+                    className={"overlayButton"}
+                    onClick={this.handleModal}
+                  >
+                    Close
+                  </button>
+                </section>
+              </Modal>
+              <button
+                className={"folderDeleteButton"}
+                onClick={this.handleFolderDelete}
+              >
+                Delete
+              </button>
+            </div>
           </div>
         </span>
         <div className={"nameDate"}>

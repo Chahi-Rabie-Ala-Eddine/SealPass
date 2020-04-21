@@ -23,7 +23,7 @@ main {
 .cloudFileComponentContainer
 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(247px, 1fr));
   margin-bottom: 3rem;
 }
 
@@ -38,6 +38,7 @@ main {
   flex-flow: row;
   justify-items: center;
   justify-content: space-between;
+  align-items: center;
 }
 
 .newFolderNameText {
@@ -103,8 +104,8 @@ main {
 }
 
 .shareButton {
-  width: 40px;
-  height: 30px;
+  width: fit-content;
+  height: fit-content;
   margin-right: 1rem;
   border: none;
   color: white;
@@ -145,6 +146,7 @@ main {
 .FolderBox img,
 .FileBox img {
   width: 30px;
+  display: block;
 }
 
 .nameDate h3,
@@ -225,10 +227,6 @@ main {
   margin: 2rem 0.5rem 0 0.5rem;
 }
 
-.shareIcon {
-  transform: rotate(45deg);
-}
-
 .nameDate h5 {
   margin: 0 0.5rem 1rem 0.5rem;
   font-weight: lighter;
@@ -249,8 +247,10 @@ main {
 
 .folderIcon,
 .fileIcon {
+  display: block;
   margin-right: 1rem;
   margin-left: 1rem;
+  align-self: center;
 }
 
 .hr_line {
@@ -308,6 +308,14 @@ main {
 
 .fileDownloadButton {
   margin-left: -1rem;
+  padding: 0;
+  width: fit-content;
+  height: fit-content;
+  background-color: red;
+  color: white;
+  border: none;
+  font-size: 0.8rem;
+  border-radius: 20px;
 }
 
 .folderContentModal {
@@ -323,4 +331,26 @@ main {
   background-color: white;
   margin: 5rem auto 5rem auto;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.fileDeleteButton, .folderDeleteButton{
+  margin-left: 0.1rem;
+}
+
+.downloadIcon{
+  width: 20px;
+  display: block;
+}
+
+.actionsIcon{
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.actionsWrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  justify-items: center;
 }
