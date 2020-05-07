@@ -30,11 +30,11 @@ export default class cards extends Component {
     }
     onFieldChange = (e) => this.setState({[e.target.name]: e.target.value});
     callParent2() {
-        //Todo
         console.log("todo")
     }
     saveCard = () => {
-        axios.post(`/user/card`, {name: this.state.name, number: this.state.number, expiry: this.state.expiry, cvc: this.state.cvc})
+        let id = localStorage.getItem('userId')
+        axios.post(`/user/card`, {name: this.state.name, number: this.state.number, expiry: this.state.expiry, cvc: this.state.cvc, userId: id})
         .then(res => {
             console.log(res)
             this.setState({modalll: false})
@@ -68,7 +68,7 @@ export default class cards extends Component {
                         <div className="title_span"><h4 className="title_text">Passwords</h4></div>
                         <div className="passwords_card_view">
                             {
-                                passwords.map(password => <PasswordCard password={password} key={password._id} callParent2={this.callParent2}/>)
+                                passwords.map(password => <PasswordCard password={password} key={password._id} callParent2={this.callParent2} />)
                             }
                         </div>
                         <div className="title_span"><h4 className="title_text">Cards</h4></div>

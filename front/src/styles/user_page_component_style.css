@@ -109,4 +109,9 @@ a {
         margin-left: 240px;
         padding: 20px;
     }
+    .filesCard {
+        display: flex;
+        justify-content: center;
+        /* background: green; */
+    }
 }
