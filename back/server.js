@@ -3,6 +3,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const fileUpload = require('express-fileupload');
 require ('dotenv/config');
 
 //Instanciate express
@@ -11,6 +12,7 @@ const app = express();
 //Middlewares
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
+app.use(fileUpload());
 
 //Import routes
 const userRoute = require('./routes/user');

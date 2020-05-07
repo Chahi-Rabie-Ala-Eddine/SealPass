@@ -1,21 +1,26 @@
 const express = require('express');
 const password_model = require('../models/password_model');
+const Cryptr = require('cryptr');
+
+const cryptr = new Cryptr('sealpasssecret');
 
 const router = express.Router();
 
-router.get('/', async (req, res) => {
+router.post('/getpass', async (req, res) => {
 	try {
-		let getPasswords = await password_model.find()
+		let getPasswords = await password_model.find({userId: req.body.userId})
 		res.json(getPasswords)
 	} catch (err) {
 		res.json({message: err})
 	}
 });
 router.post('/', async (req, res) => {
+	let encryptedPassword = cryptr.encrypt(req.body.password);
     let password = password_model({
 		site: req.body.site,
 		email: req.body.email,
-		password: req.body.password
+		password: encryptedPassword,
+		userId: req.body.userId
 	})
 	try {
 		let savedPassword = await password.save()
