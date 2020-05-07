@@ -9,6 +9,18 @@ require ('dotenv/config');
 //Instanciate express
 const app = express();
 
+//Mis en place de TLS
+const tls = require('tls');
+const https = require("https"),
+  fs = require("fs");
+
+const options = {
+	key: fs.readFileSync('mykey.pem'),
+	cert: fs.readFileSync('my-cert.pem'),
+	dhparam: fs.readFileSync("dh-strong.pem")
+}
+
+
 //Middlewares
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
@@ -35,7 +47,11 @@ app.use('/user/cloud', cloudRoute);
 mongoose.connect(process.env.DB_CONNECTION, {useNewUrlParser: true}, () => console.log("connect to the db!!!"));
 
 //Lunch Server
+
 app.use(cors());
-app.listen(8080, () => {
+
+app.listen(8000, () => {
 	console.log('server is ready!!!')
 })
+
+https.createServer(options, app).listen(8080);
