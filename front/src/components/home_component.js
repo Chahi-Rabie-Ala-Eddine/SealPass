@@ -76,7 +76,7 @@ export default class home_component extends Component {
     }
     generatePassword = () => {
         var password = generator.generate({
-            length: 10,
+            length: Math.random() * 24 + 8,
             numbers: true,
             symbols: true,
             lowercase: true,
