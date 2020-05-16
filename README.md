@@ -13,6 +13,10 @@ Its features are as follows :
 * Generate and manage strong and secure passwords.
 * Update stored passwords.
 
+## Background
+
+![alt text](http://ala-eddine-chahi.fr/seal)
+
 ## License & copyright
 
 © **Chahi Rabie Ala Eddine**, **Jacquet Julien**, **Ben Mallem Amir**, **Kossi Eloi Fabius Defly**, ***Versailles Saint Quentin en Yvelines college***.
